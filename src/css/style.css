@@ -1,3 +1,10 @@
+@charset "UTF-8";
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  src: local("Open Sans"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5,6 +12,7 @@
 
 .container {
   max-width: 1140px;
+  border: 1px solid #000;
   margin: auto;
 }
 
@@ -39,6 +47,10 @@
     max-width: 100%;
     padding: 0 10px;
   }
+}
+
+body {
+  font-family: sans-serif;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -382,5 +394,47 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+/* Импорт стилей шапки */
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-logo {
+  margin-right: 50px;
+}
+
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-list__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: 'Open sans';
+  font-size: 13px;
+  border-right: #dfdfdf 1px dotted;
+  padding: 10px 20px;
+}
+
+.menu-list__item:last-child {
+  border-right: none;
+}
+
+.menu-list__item a {
+  text-decoration: none;
+  color: #2d2d2d;
 }
 /*# sourceMappingURL=style.css.map */
