@@ -543,13 +543,13 @@ template {
 .pictures-left {
   position: absolute;
   left: 0;
-  top: 15px;
+  top: 17px;
 }
 
 .pictures-right {
   position: absolute;
   right: 0;
-  top: -27px;
+  top: -25px;
 }
 
 .grey-line {
