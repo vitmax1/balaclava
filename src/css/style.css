@@ -24,6 +24,7 @@
 
 .container {
   max-width: 1140px;
+  border: 1px solid #000;
   margin: auto;
 }
 
@@ -62,6 +63,7 @@
 
 body {
   font-family: 'Roboto';
+  color: #383838;
 }
 
 .button {
@@ -69,10 +71,18 @@ body {
   text-transform: uppercase;
   border-radius: 50px;
   font-size: 13px;
+  width: 194px;
+  height: 50px;
+  outline: none;
 }
 
 .button:hover {
   cursor: pointer;
+}
+
+.button-success {
+  background-color: #3fc380;
+  border: none;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -806,5 +816,73 @@ template {
     max-width: 300px;
     margin-bottom: 20px;
   }
+}
+
+.room {
+  background: url("../img/hotel-room1.jpg") no-repeat;
+  background-position: left;
+  background-size: 54% contain;
+  position: relative;
+}
+
+.room:after {
+  content: '';
+  width: 46%;
+  height: 460px;
+  position: absolute;
+  top: 11px;
+  right: 0;
+  background-color: #f7f9f9;
+  z-index: 1;
+}
+
+.room-heading {
+  border: 1px solid #000;
+}
+
+.room-info {
+  z-index: 2;
+  border: 1px solid #000;
+  width: 50%;
+}
+
+.room-info__title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.room-info__text {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.room-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 100px;
+  line-height: 75px;
+  font-family: 'Franklin Gothic Heavy';
+  text-align: center;
+}
+
+.room-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  top: 58px;
+}
+
+.room-pattern {
+  position: relative;
+  left: 376px;
+  bottom: 5px;
 }
 /*# sourceMappingURL=style.css.map */
