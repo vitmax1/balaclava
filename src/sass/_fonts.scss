@@ -10,3 +10,18 @@
 	src: local('Franklin Gothic Heavy'),
 		url("../fonts/FRAHV.TTF") format("truetype");
 }
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	src: local('Roboto'),
+		url("../fonts/Roboto-Regular.ttf") format("truetype"),
+		url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@mixin reg {
+	font-family: 'Roboto', serif;
+	font-weight: 300;
+}
+@mixin bold {
+	font-family: 'Roboto', serif;
+	font-weight: 700;
+}
