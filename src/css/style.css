@@ -24,6 +24,7 @@
 
 .container {
   max-width: 1140px;
+  border: 1px solid #000;
   margin: auto;
 }
 
@@ -543,13 +544,13 @@ template {
 .pictures-left {
   position: absolute;
   left: 0;
-  top: 17px;
+  top: 15px;
 }
 
 .pictures-right {
   position: absolute;
   right: 0;
-  top: -25px;
+  top: -27px;
 }
 
 .grey-line {
@@ -762,5 +763,49 @@ template {
 .item-description {
   font-size: 14px;
   text-align: justify;
+}
+
+@media (max-width: 1200px) {
+  .welcome-post {
+    max-width: 580px;
+  }
+  .welcome-image {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .welcome-post {
+    max-width: 100%;
+  }
+  .welcome-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-post {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .welcome-headline {
+    font-size: 26px;
+  }
+  .welcome-edge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .welcome-edge__item {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

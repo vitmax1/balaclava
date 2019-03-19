@@ -32,7 +32,29 @@
 .item-description
 	font-size: 14px
 	text-align: justify
-	
-
-	
-	
+@media (max-width: 1200px)   // 1200
+	.welcome
+		&-post
+			max-width: 580px
+		&-image
+			max-height: 250px
+@media (max-width: 992px)   // 992
+	.welcome
+		&-post
+			max-width: 100%
+		&-image
+			display: none
+@media (max-width: 768px)   // 768
+	.welcome
+		&-post
+			font-size: 14px
+			line-height: 20px
+		&-headline
+			font-size: 26px
+		&-edge
+			display: flex
+			flex-direction: column
+			align-items: center
+			&__item
+				max-width: 300px
+				margin-bottom: 20px
