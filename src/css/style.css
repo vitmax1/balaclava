@@ -24,7 +24,6 @@
 
 .container {
   max-width: 1140px;
-  border: 1px solid #000;
   margin: auto;
 }
 
@@ -83,6 +82,12 @@ body {
 .button-success {
   background-color: #3fc380;
   border: none;
+}
+
+.button-sauna {
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -428,7 +433,7 @@ template {
   display: none;
 }
 
-/* Импорт стилей шапки */
+/* Импорт стилей index */
 .nav-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -819,10 +824,12 @@ template {
 }
 
 .room {
-  background: url("../img/hotel-room1.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(240, 154, 76, 0.1)), color-stop(50%, rgba(240, 154, 76, 0.2))), url("../img/hotel-room1.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(240, 154, 76, 0.1), rgba(240, 154, 76, 0.2) 50%), url("../img/hotel-room1.jpg") no-repeat;
   background-position: left;
-  background-size: 54% contain;
+  background-size: 50% contain;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .room:after {
@@ -830,19 +837,14 @@ template {
   width: 46%;
   height: 460px;
   position: absolute;
-  top: 11px;
-  right: 0;
-  background-color: #f7f9f9;
+  top: 0px;
+  right: 0px;
+  background-color: #f76666;
   z-index: 1;
-}
-
-.room-heading {
-  border: 1px solid #000;
 }
 
 .room-info {
   z-index: 2;
-  border: 1px solid #000;
   width: 50%;
 }
 
@@ -855,6 +857,7 @@ template {
   font-size: 16px;
   line-height: 24px;
   text-align: justify;
+  margin-bottom: 30px;
 }
 
 .room-title {
@@ -864,6 +867,16 @@ template {
   line-height: 75px;
   font-family: 'Franklin Gothic Heavy';
   text-align: center;
+  margin-top: 10px;
+}
+
+.room-title:after {
+  display: block;
+  content: '';
+  width: 130px;
+  height: 6px;
+  margin-top: -40px;
+  background: #ffffff;
 }
 
 .room-wrap {
@@ -873,16 +886,174 @@ template {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  top: 58px;
+  top: 55px;
 }
 
 .room-pattern {
   position: relative;
-  left: 376px;
-  bottom: 5px;
+  left: 366px;
+  bottom: -5px;
+}
+
+@media (max-width: 1200px) {
+  .room {
+    height: 300px;
+  }
+  .room:after {
+    content: '';
+    width: 60%;
+    height: 300px;
+  }
+  .room-info {
+    width: 70%;
+    padding-right: 10px;
+  }
+  .room-info__title {
+    font-size: 24px;
+  }
+  .room-info__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .room-pattern {
+    display: none;
+  }
+  .room-heading {
+    max-width: 490px;
+  }
+  .room-title {
+    font-size: 70px;
+    line-height: 60px;
+  }
+  .room-title:after {
+    display: none;
+  }
+}
+
+.sauna {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(240, 154, 76, 0.1)), color-stop(50%, rgba(240, 154, 76, 0.2))), url("../img/sauna.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(240, 154, 76, 0.1), rgba(240, 154, 76, 0.2) 50%), url("../img/sauna.jpg") no-repeat;
+  background-position: right;
+  background-size: 54% contain;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.sauna:before {
+  content: '';
+  width: 46%;
+  height: 460px;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  background-color: #f76666;
+}
+
+.sauna-info {
+  z-index: 2;
+  width: 40%;
+}
+
+.sauna-info__title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.sauna-info__text {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.sauna-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 100px;
+  line-height: 75px;
+  font-family: 'Franklin Gothic Heavy';
+  text-align: left;
+  max-width: 530px;
+  margin-top: 0;
+}
+
+.sauna-title:after {
+  display: block;
+  content: '';
+  width: 265px;
+  height: 6px;
+  position: relative;
+  left: 285px;
+  margin-top: -40px;
+  background: #ffffff;
+}
+
+.sauna-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 55px;
+}
+
+.sauna-pattern {
+  position: relative;
+  left: 491px;
+  bottom: -5px;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .sauna {
+    background-size: contain;
+    height: 300px;
+  }
+  .sauna:before {
+    content: '';
+    width: 60%;
+    height: 300px;
+  }
+  .sauna-info {
+    width: 70%;
+  }
+  .sauna-info__title {
+    font-size: 24px;
+  }
+  .sauna-info__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .sauna-heading {
+    max-width: 450px;
+    padding-left: 100px;
+    margin-right: 0;
+  }
+  .sauna-title {
+    font-size: 70px;
+    line-height: 60px;
+  }
+  .sauna-title:after {
+    display: none;
+  }
+  .sauna-pattern {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

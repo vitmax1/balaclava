@@ -1,24 +1,24 @@
-.room
-	background: linear-gradient(to right, rgba(240,154,76,0.1), rgba(240,154,76,0.2) 50%), url('../img/hotel-room1.jpg') no-repeat
-	background-position: left
-	background-size: 50% contain
+.sauna
+	background: linear-gradient(to right, rgba(240,154,76,0.1), rgba(240,154,76,0.2) 50%), url('../img/sauna.jpg') no-repeat
+	background-position: right
+	background-size: 54% contain
 	position: relative
 	margin-bottom: 40px
-	&:after
+	&:before
 		content: ''
 		width: 46%
 		height: 460px
 		position: absolute
+		z-index: 2
 		top: 0px
-		right: 0px
+		left: 0px
 		background-color: #f76666
-		z-index: 1
 	&-heading
 		// border: 1px solid #000
 	&-info
 		z-index: 2
 		// border: 1px solid #000
-		width: 50%
+		width: 40%
 		&__title
 			font-size: 30px
 			margin: 0
@@ -33,48 +33,56 @@
 		font-size: 100px
 		line-height: 75px
 		font-family: 'Franklin Gothic Heavy'
-		text-align: center
-		margin-top: 10px
+		text-align: left
+		max-width: 530px
+		margin-top: 0
 		&:after
 			display: block
 			content: ''
-			width: 130px
+			width: 265px
 			height: 6px
+			position: relative
+			left: 285px
 			margin-top: -40px
 			background: #ffffff	
 	&-wrap
-		// border: 1px solid #000
 		display: flex
-		justify-content: flex-end
+		flex-direction: row-reverse
+		justify-content: space-between
 		align-items: center
 		position: relative
 		top: 55px
 	&-pattern
 		position: relative
-		left: 366px
+		left: 491px
 		bottom: -5px
+		z-index: 1
+		// opacity: 0.1
 @media (max-width: 1200px)   // 1200
-	.room
+	.sauna
+		background-size: contain
 		height: 300px
-		&:after
+		&:before
 			content: ''
 			width: 60%
 			height: 300px
 		&-info
 			width: 70%
-			padding-right: 10px
 			&__title
 				font-size: 24px
 			&__text
 				font-size: 14px
 				line-height: 20px
 				margin-bottom: 20px
-		&-pattern
-			display: none
 		&-heading
-			max-width: 490px
+			max-width: 450px
+			// border: 1px solid #000
+			padding-left: 100px
+			margin-right: 0
 		&-title
 			font-size: 70px
 			line-height: 60px
 			&:after
 				display: none
+		&-pattern
+			display: none
