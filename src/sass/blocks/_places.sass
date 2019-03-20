@@ -1,0 +1,74 @@
+.places
+	padding: 20px 0
+	&-headline
+		text-align: center
+		font-size: 30px
+	&-description
+		margin: auto
+		max-width: 760px
+		font-size: 16px
+		text-align: center
+		margin-bottom: 40px
+		line-height: 24px
+	&-row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 40px
+		&__card
+			background-color: #f7f9f9
+			flex-basis: 32%
+			border-bottom: 3px solid #cccccc
+			&:after
+				display: block
+				position: relative
+				content: ''
+				width: 40px
+				height: 2px
+				background-color: #cccccc
+				bottom:	90px
+				left: 23px
+			&:hover:after
+			 	background-color: #000
+			&:hover
+				border-bottom: 3px solid #3fc380
+				cursor: pointer
+	&-name
+		font-size: 19px
+		line-height: 24px
+.card-image
+	width: 100%
+.card-text
+	padding: 25px 15px 5px 23px
+	height: 140px
+	// &:after
+	// 	display: block
+	// 	position: relative
+	// 	content: ''
+	// 	width: 40px
+	// 	height: 2px
+	// 	background-color: #cccccc
+	// 	bottom:	80px
+	// &:hover:after
+	// 	background-color: #000
+	// &:hover
+	// 	border-bottom: 3px solid #3fc380
+	// 	cursor: pointer
+.date
+	margin-bottom: 20px
+.center-places
+	text-align: center
+	margin-bottom: 40px
+@media (max-width: 1200px)   // 1200
+	.places
+		&-row
+			display: flex
+			justify-content: space-between
+			margin-bottom: 40px
+			&__card
+				background-color: #f7f9f9
+				flex-basis: 48%
+				&:last-child
+					display: none
+	
+
+	
