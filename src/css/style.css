@@ -839,7 +839,7 @@ template {
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: #f76666;
+  background-color: #f7f9f9;
   z-index: 1;
 }
 
@@ -952,7 +952,7 @@ template {
   z-index: 2;
   top: 0px;
   left: 0px;
-  background-color: #f76666;
+  background-color: #f7f9f9;
 }
 
 .sauna-info {
