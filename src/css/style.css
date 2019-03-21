@@ -960,8 +960,15 @@ template {
     width: 90%;
     margin: auto;
   }
+  .room-info__title {
+    text-align: center;
+  }
   .room-heading {
     display: none;
+  }
+  .button-room {
+    display: block;
+    margin: auto;
   }
 }
 
@@ -1101,8 +1108,15 @@ template {
     width: 90%;
     margin: auto;
   }
+  .sauna-info__title {
+    text-align: center;
+  }
   .sauna-heading {
     display: none;
+  }
+  .sauna .button-sauna {
+    display: block;
+    margin: auto;
   }
 }
 
@@ -1185,22 +1199,38 @@ template {
 }
 
 @media (max-width: 1200px) {
-  .places-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 40px;
-  }
   .places-row__card {
-    background-color: #f7f9f9;
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
   }
   .places-row__card:last-child {
     display: none;
+  }
+}
+
+@media (max-width: 790px) {
+  .places-headline {
+    font-size: 24px;
+  }
+  .places-description {
+    max-width: 550px;
+    font-size: 14px;
+  }
+  .places-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .places-row__card {
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  .places-row__card:last-child {
+    display: block;
   }
 }
 
