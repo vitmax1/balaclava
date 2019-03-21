@@ -14,7 +14,7 @@
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
-  src: local("Roboto"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Thin.ttf") format("truetype"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  src: local("Roboto"), url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 * {
@@ -84,10 +84,10 @@ body {
   border: none;
 }
 
-.button-sauna {
+.button-white-border {
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .grey-line {
@@ -110,6 +110,13 @@ body {
   height: 5px;
   width: 100%;
   background-color: #dfdfdf;
+}
+
+.grey-line-rooms {
+  margin: 23px 0;
+  width: 100%;
+  height: 1px;
+  background-color: #efefef;
 }
 
 .grey-line-footer {
@@ -459,6 +466,108 @@ template {
  * Add the correct display in IE 10.
  */
 [hidden] {
+  display: none;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
   display: none;
 }
 
@@ -1447,5 +1556,101 @@ template {
 
 .about-image {
   width: 100%;
+}
+
+/* Импорт стилей rooms */
+.left-arrow {
+  position: relative;
+  left: 5px;
+  top: 25px;
+}
+
+.left-arrow:hover {
+  cursor: pointer;
+}
+
+.right-arrow {
+  position: relative;
+  right: 5px;
+  top: 25px;
+}
+
+.right-arrow:hover {
+  cursor: pointer;
+}
+
+.nav-img {
+  max-width: 130px;
+}
+
+.rooms-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rooms-pictures {
+  background-color: #f5555f;
+  display: block;
+  width: 400px;
+  height: 300px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.rooms-description {
+  padding-left: 30px;
+  padding-top: 10px;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+.rooms-description:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #cccccc;
+}
+
+.rooms-description__heading {
+  font-size: 18px;
+  color: #3fc380;
+}
+
+.rooms-description__text {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.rooms-single {
+  margin-bottom: 10px;
+}
+
+.rooms-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rooms-nav__item {
+  height: 80px;
+}
+
+.rooms-tag {
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.rooms-tag__star {
+  display: block;
+  font-size: 12px;
+  line-height: 22px;
+  color: #959595;
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=style.css.map */
