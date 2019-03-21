@@ -1,66 +1,57 @@
-.footer
-	padding: 30px 0
-	background-color: #393939
-	height: 400px
+.top
 	&-nav
+		background-color: #f7f9f9
 		&-box
 			display: flex
-			justify-content: space-between
 			align-items: center
-			margin-bottom: 30px	
+			justify-content: space-between
+			padding: 13px 0
 		&-tel
 			font-size: 19px
 			text-decoration: none
 			display: inline-block
-			color: #ffffff
+			color: #2a2a2a
+			+bold
 	&-menu
 		&-list
 			display: flex
+			padding-left: 0
 			&__item
+				align-items: center
+				list-style: none
+				padding: 10px 20px
 				text-transform: uppercase
 				font-family: 'Open sans'
-				list-style: none
-				padding: 10px 15px
-				font-size: 12px
+				font-size: 13px
+				border-right: #dfdfdf 1px dotted
 				&:last-child
-					padding-right: 5px
+					border-right: none
 			&__item a
 				text-decoration: none
-				color: #ffffff
+				color: #2d2d2d
 				&:hover
-					font-weight: 700
 					color: #3fc380
 					cursor: pointer
 	&-geotag
-		display: flex
+		display: flex	
 		flex-direction: column
 		justify-content: flex-end
-		&-img
-			margin-right: -50px
 		&-adress
 			width: 160px
 			font-size: 12px
-			color: #ffffff
+			margin-bottom: 0
 			line-height: 12px
-			margin-bottom: 0				
-.copyright
-	margin: auto
-	margin-top: 30px
-	max-width: 765px
-	color: #9c9c9c
-	text-align: center
-	font-size: 11px
-	line-height: 17px
+			+bold
+		&-img
+			margin-right: -25px
 @media (max-width: 1200px)   // 1200
-	.footer
+	.top
 		&-nav
 			&-logo
 				display: none
-	.footer
 		&-menu
 			&-list
-				padding-left: 5px
 				flex-wrap: wrap
 		&-geotag
 			&-img
-				display: none	
+				display: none

@@ -15,11 +15,17 @@
 	font-family: 'Roboto';
 	src: local('Roboto'),
 		url("../fonts/Roboto-Regular.ttf") format("truetype"),
+		url("../fonts/Roboto-Thin.ttf") format("truetype"),
 		url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@mixin thin {
+	font-family: 'Roboto', serif;
+	font-weight: 100;
 }
 @mixin reg {
 	font-family: 'Roboto', serif;
-	font-weight: 300;
+	font-weight: 400;
 }
 @mixin bold {
 	font-family: 'Roboto', serif;
