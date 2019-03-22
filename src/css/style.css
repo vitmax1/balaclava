@@ -1833,4 +1833,13 @@ template {
   color: #959595;
   margin-bottom: 25px;
 }
+
+@media (max-width: 1000px) {
+  .rooms-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=style.css.map */
