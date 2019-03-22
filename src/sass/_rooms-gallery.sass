@@ -1,17 +1,20 @@
 .left-arrow
 	position: relative
-	left: 5px
-	top: 25px
+	outline: none
+	left: 8px
+	bottom: 55px
 	&:hover
 		cursor: pointer
 .right-arrow
 	position: relative
-	right: 5px
-	top: 25px
+	outline: none
+	right: -435px
+	bottom: 55px
 	&:hover
 		cursor: pointer
-.nav-img
-	max-width: 130px
+.column
+	display: block
+	max-width: 460px
 .rooms
 	&-wrap
 		display: flex
@@ -38,12 +41,21 @@
 			font-size: 14px
 			line-height: 22px
 	&-single
+		max-width: 460px
 		margin-bottom: 10px
+		&__slide
+			width: 100%
 	&-nav
-		display: flex
-		justify-content: space-between
+		max-width: 410px
+		margin: auto
 		&__item
-			height: 80px
+			padding: 0 5px
+			outline: none
+			border: none
+		&__slide
+			width: 100%
+			outline: none
+			border: none
 	&-tag
 		display: block
 		font-size: 14px
@@ -54,13 +66,8 @@
 			line-height: 22px
 			color: #959595
 			margin-bottom: 25px
+
 			
 
 
 
-// .slider-for
-// 	width: 500px
-// 	height: 250px
-// .slider-nav
-// 	width: 500px
-// 	height: 85px
