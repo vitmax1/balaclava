@@ -18,6 +18,8 @@
 .rooms
 	&-wrap
 		display: flex
+		&:last-child
+			margin-bottom: 50px
 	&-pictures
 		background-color: #f5555f
 		display: block
@@ -66,11 +68,83 @@
 			line-height: 22px
 			color: #959595
 			margin-bottom: 25px
+.adding
+	padding: 30px 0
+	background-color: #f7f9f9
+	&-headline
+		margin-bottom: 30px
+	&-wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&__item
+			flex-basis: 30%
+			background-color: #ffffff
+			margin-bottom: 30px
+			border-bottom: 3px solid #eeeeee
+			&:hover #dark-box
+				cursor: pointer
+				display: block
+				transition: all 1s linear
+		&__image
+			margin-bottom: 5px
+			max-width: 360px
+		&__title
+			padding-left: 20px
+			margin-bottom: 30px
+			width: 320px
+			font-size: 19px
+			+bold
+			line-height: 24px	
+			&:before
+				content: ''
+				display: block
+				width: 40px
+				height: 2px
+				background-color: #cccccc
+				margin-bottom: 20px
+#dark-box
+	content: ''
+	display: none
+	width: 360px
+	height: 326px
+	position: absolute
+	background-color: rgba(0, 0, 0, .7)
+.dark-box
+	&__text
+		width: 320px
+		position: relative
+		text-align: center
+		font-size: 19px
+		+bold
+		line-height: 24px
+		margin: auto
+		top: 130px
+		color: #ffffff
+		z-index: 3
+@media (max-width: 1200px)   // 1200
+ .adding
+	 &-headline
+		 text-align: center
+	 &-wrap
+		 justify-content: space-evenly
 @media (max-width: 1000px)   // 1000
 	.rooms
 		&-wrap
 			flex-direction: column
-			
+@media (max-width: 768px)   // 768
+	.adding
+		&-headline
+			font-size: 24px
+@media (max-width: 640px)
+	.adding
+		&-headline
+			font-size: 20px
+@media (max-width: 500px)
+	.adding
+		&-headline
+			font-size: 16px
+
 
 
 
