@@ -789,7 +789,8 @@ template {
 }
 
 .hero {
-  background: url("../img/header-bg.jpg");
+  background: url("../img/header-bg.jpg") no-repeat;
+  background-size: cover;
   height: 700px;
 }
 
@@ -874,7 +875,13 @@ template {
 
 @media (max-width: 1600px) {
   .pictures-eagle {
-    display: none;
+    right: 290px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .pictures-eagle {
+    right: 190px;
   }
 }
 
@@ -891,6 +898,9 @@ template {
   .headline-subtitle {
     font-size: 16px;
     max-width: 650px;
+  }
+  .pictures-eagle {
+    display: none;
   }
   .pictures-left {
     display: none;
@@ -1111,6 +1121,15 @@ template {
     max-width: 300px;
     margin-bottom: 20px;
   }
+  .welcome-edge__item:last-child {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 568px) {
+  .welcome {
+    padding: 20px 0;
+  }
 }
 
 .room {
@@ -1131,6 +1150,10 @@ template {
   right: 0px;
   background-color: #f7f9f9;
   z-index: 1;
+}
+
+.room-heading {
+  border: 1px solid #000;
 }
 
 .room-info {
@@ -1245,6 +1268,55 @@ template {
   .button-room {
     display: block;
     margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .room {
+    background-color: #f7f9f9;
+    background-image: none;
+  }
+  .room-wrap {
+    top: 45px;
+  }
+}
+
+@media (max-width: 640px) {
+  .room {
+    height: 320px;
+  }
+}
+
+@media (max-width: 568px) {
+  .room {
+    height: 330px;
+  }
+  .room-wrap {
+    top: 30px;
+  }
+}
+
+@media (max-width: 438px) {
+  .room {
+    height: 340px;
+  }
+}
+
+@media (max-width: 375px) {
+  .room {
+    height: 360px;
+  }
+}
+
+@media (max-width: 345px) {
+  .room {
+    height: 370px;
+  }
+}
+
+@media (max-width: 330px) {
+  .room {
+    height: 410px;
   }
 }
 
@@ -1393,6 +1465,55 @@ template {
   .sauna .button-sauna {
     display: block;
     margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .sauna {
+    background-color: #f7f9f9;
+    background-image: none;
+  }
+  .sauna-wrap {
+    top: 45px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sauna {
+    height: 320px;
+  }
+}
+
+@media (max-width: 568px) {
+  .sauna {
+    height: 330px;
+  }
+  .sauna-wrap {
+    top: 30px;
+  }
+}
+
+@media (max-width: 438px) {
+  .sauna {
+    height: 340px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sauna {
+    height: 360px;
+  }
+}
+
+@media (max-width: 345px) {
+  .sauna {
+    height: 370px;
+  }
+}
+
+@media (max-width: 330px) {
+  .sauna {
+    height: 410px;
   }
 }
 

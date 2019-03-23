@@ -27,7 +27,8 @@
 				color: #3fc380
 				cursor: pointer
 .hero
-	background: url('../img/header-bg.jpg')
+	background: url('../img/header-bg.jpg') no-repeat
+	background-size: cover
 	height: 700px
 	&-headline
 		display: flex
@@ -87,7 +88,11 @@
 @media (max-width: 1600px)	
 	.pictures
 		&-eagle
-			display: none
+			right: 290px
+@media (max-width: 1350px)	
+	.pictures
+		&-eagle
+			right: 190px
 @media (max-width: 1200px)   // 1200
 	.nav
 		&-logo
@@ -100,6 +105,8 @@
 			font-size: 16px
 			max-width: 650px
 	.pictures
+		&-eagle
+			display: none
 		&-left
 			display: none
 		&-right
