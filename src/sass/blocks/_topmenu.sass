@@ -55,3 +55,40 @@
 		&-geotag
 			&-img
 				display: none
+@media (max-width: 768px)   // 768
+	.top
+		&-nav
+			&-box
+		&-menu
+			&-list
+				&__item
+					flex-basis: 50%
+					&:nth-child(even)
+						border-right: none
+@media (max-width: 652px)   // 652
+	.top
+		&-nav
+			&-box
+		&-menu
+			&-list
+				&__item
+					flex-basis: 90%
+					&:nth-child(odd)
+						border-right: none
+@media (max-width: 568px)   // 568
+	.top
+		&-nav
+			&-box
+				display: block
+		&-menu
+			&-list
+				&__item
+					flex-basis: 50%	
+		&-geotag
+			margin-left: 20px
+@media (max-width: 480px)   // 480
+	.top
+		&-menu
+			&-list
+				display: block
+

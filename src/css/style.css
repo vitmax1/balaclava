@@ -1830,6 +1830,45 @@ template {
   }
 }
 
+@media (max-width: 768px) {
+  .top-menu-list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .top-menu-list__item:nth-child(even) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 652px) {
+  .top-menu-list__item {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+  .top-menu-list__item:nth-child(odd) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 568px) {
+  .top-nav-box {
+    display: block;
+  }
+  .top-menu-list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .top-geotag {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-menu-list {
+    display: block;
+  }
+}
+
 /* Импорт стилей about */
 .about-post {
   line-height: 25px;
