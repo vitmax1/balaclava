@@ -2316,12 +2316,13 @@ template {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  max-width: 1100px;
+  max-width: 1090px;
   margin: auto;
 }
 
 .bathhouse-nav__item {
   outline: none;
+  padding: 0 5px;
 }
 
 .bathhouse-nav__img {
