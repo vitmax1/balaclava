@@ -1631,7 +1631,7 @@ template {
 .footer {
   padding: 30px 0;
   background-color: #393939;
-  height: 400px;
+  height: 550px;
 }
 
 .footer-nav-box {
@@ -1658,6 +1658,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
 }
 
 .footer-menu-list__item {
@@ -1697,7 +1698,7 @@ template {
 }
 
 .footer-geotag-img {
-  margin-right: -50px;
+  margin-right: -80px;
 }
 
 .footer-geotag-adress {
@@ -1709,8 +1710,7 @@ template {
 }
 
 .copyright {
-  margin: auto;
-  margin-top: 30px;
+  margin: 30px auto;
   max-width: 765px;
   color: #9c9c9c;
   text-align: center;
@@ -1729,6 +1729,60 @@ template {
   }
   .footer-geotag-img {
     display: none;
+  }
+  .copyright {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-menu-list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .copyright {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 652px) {
+  .footer-menu-list__item {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+  .copyright {
+    max-width: 510px;
+  }
+}
+
+@media (max-width: 568px) {
+  .footer-nav-box {
+    display: block;
+  }
+  .footer-menu-list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .footer-geotag {
+    margin-left: 20px;
+  }
+  .copyright {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-menu-list {
+    display: block;
+  }
+  .copyright {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .copyright {
+    max-width: 250px;
   }
 }
 

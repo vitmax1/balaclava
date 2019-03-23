@@ -1,7 +1,7 @@
 .footer
 	padding: 30px 0
 	background-color: #393939
-	height: 400px
+	height: 550px
 	&-nav
 		&-box
 			display: flex
@@ -16,6 +16,7 @@
 	&-menu
 		&-list
 			display: flex
+			padding-left: 0
 			&__item
 				text-transform: uppercase
 				font-family: 'Open sans'
@@ -36,7 +37,7 @@
 		flex-direction: column
 		justify-content: flex-end
 		&-img
-			margin-right: -50px
+			margin-right: -80px
 		&-adress
 			width: 160px
 			font-size: 12px
@@ -44,8 +45,7 @@
 			line-height: 12px
 			margin-bottom: 0				
 .copyright
-	margin: auto
-	margin-top: 30px
+	margin: 30px auto
 	max-width: 765px
 	color: #9c9c9c
 	text-align: center
@@ -64,3 +64,48 @@
 		&-geotag
 			&-img
 				display: none	
+	.copyright
+		max-width: 680px
+@media (max-width: 768px)   // 768
+	.footer
+		&-nav
+			&-box
+		&-menu
+			&-list
+				&__item
+					flex-basis: 50%
+	.copyright
+		max-width: 580px
+@media (max-width: 652px)   // 652
+	.footer
+		&-nav
+			&-box
+		&-menu
+			&-list
+				&__item
+					flex-basis: 90%
+	.copyright
+		max-width: 510px
+@media (max-width: 568px)   // 568
+	.footer
+		&-nav
+			&-box
+				display: block
+		&-menu
+			&-list
+				&__item
+					flex-basis: 50%	
+		&-geotag
+			margin-left: 20px
+	.copyright
+		max-width: 400px
+@media (max-width: 480px)   // 480
+	.footer
+		&-menu
+			&-list
+				display: block
+	.copyright
+		max-width: 300px
+@media (max-width: 400px)   // 400
+	.copyright
+		max-width: 250px
