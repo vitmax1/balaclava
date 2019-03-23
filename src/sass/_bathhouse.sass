@@ -1,0 +1,126 @@
+.bathhouse
+	background: url('../img/bathhouse/bathhouse.jpg') no-repeat
+	background-size: cover
+	height: 560px
+	&-features
+		padding: 40px 0
+	&-headline
+		display: flex
+		flex-direction: column
+	&-title
+		text-align: center
+		color: #ffffff
+		line-height: 80px
+		text-transform: uppercase
+		font-size: 110px
+		margin: 100px 0 0px 0
+		font-family: 'Franklin Gothic Heavy'
+		position: relative
+		z-index: 1
+		&__two
+			font-size: 48px
+			text-align: center
+			color: #ffffff
+			text-transform: uppercase		
+			font-family: 'Franklin Gothic Heavy'	
+			margin-top: 30px
+			margin-bottom: 20px
+			&:after
+				display: block
+				margin: auto
+				content: ''
+				width: 580px
+				margin-top: 15px
+				border-bottom: 1px solid #fff
+				background: #ffffff
+	&-subtitle
+		font-family: 'Open sans'
+		color: #ffffff
+		max-width: 770px
+		margin: auto
+		margin-bottom: 40px
+		line-height: 26px
+		font-size: 19px
+		text-align: center
+	&-pictures
+		position: relative
+		height: 100%
+		width: 100%
+		&-left
+			position: absolute
+			left: 0
+			top: -79px
+		&-right
+			position: absolute
+			right: 0
+			top: -121px
+	&-wrap                         
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		&__item
+			flex-basis: 31%
+			text-align: center
+		&__title
+			text-transform: uppercase
+			font-size: 17px
+		&__text
+			font-size: 14px
+			line-height: 21px
+	&-gallery
+		padding-top: 70px
+		padding-bottom: 70px
+		background-color: #f7f9f9
+	&-column                        /* оформление слайдера */
+		display: block
+		max-width: 1140px
+		position: relative
+	&-single
+		margin-bottom: 20px
+		&__item
+			max-width: 1140px
+			outline: none
+		&__img
+			width: 100%	
+	&-nav
+		display: flex
+		justify-content: space-around
+		max-width: 1100px
+		margin: auto
+		&__item
+			outline: none
+		&__img
+			width: 100%
+			outline: none
+	&-left-arrow
+		position: absolute
+		outline: none
+		left: 8px
+		bottom: 45px
+		&:hover
+			cursor: pointer
+	&-right-arrow
+		position: absolute
+		outline: none
+		right: 8px
+		bottom: 45px
+		&:hover
+			cursor: pointer
+	&-post
+		padding: 40px 0
+		&__title
+			font-size: 30px
+			+bold
+		&__text
+			font-size: 16px
+			line-height: 25px
+			text-align: justify
+@media (max-width: 1200px)   // 1200
+	.bathhouse
+		&-pictures-left
+			display: none
+		&-pictures-right
+			display: none
+
+	
+

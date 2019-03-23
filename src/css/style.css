@@ -90,6 +90,13 @@ body {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.button-bath {
+  border: 3px solid rgba(0, 0, 0, 0.23);
+  background-color: #3fc380;
+  margin: auto;
+  height: 51px;
+}
+
 .grey-line {
   margin-top: 20px;
   height: 5px;
@@ -2166,6 +2173,206 @@ template {
 @media (max-width: 500px) {
   .adding-headline {
     font-size: 16px;
+  }
+}
+
+/* Импорт стилей bathhouse */
+.bathhouse {
+  background: url("../img/bathhouse/bathhouse.jpg") no-repeat;
+  background-size: cover;
+  height: 560px;
+}
+
+.bathhouse-features {
+  padding: 40px 0;
+}
+
+.bathhouse-headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bathhouse-title {
+  text-align: center;
+  color: #ffffff;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 110px;
+  margin: 100px 0 0px 0;
+  font-family: 'Franklin Gothic Heavy';
+  position: relative;
+  z-index: 1;
+}
+
+.bathhouse-title__two {
+  font-size: 48px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Heavy';
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.bathhouse-title__two:after {
+  display: block;
+  margin: auto;
+  content: '';
+  width: 580px;
+  margin-top: 15px;
+  border-bottom: 1px solid #fff;
+  background: #ffffff;
+}
+
+.bathhouse-subtitle {
+  font-family: 'Open sans';
+  color: #ffffff;
+  max-width: 770px;
+  margin: auto;
+  margin-bottom: 40px;
+  line-height: 26px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.bathhouse-pictures {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.bathhouse-pictures-left {
+  position: absolute;
+  left: 0;
+  top: -79px;
+}
+
+.bathhouse-pictures-right {
+  position: absolute;
+  right: 0;
+  top: -121px;
+}
+
+.bathhouse-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bathhouse-wrap__item {
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+  text-align: center;
+}
+
+.bathhouse-wrap__title {
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.bathhouse-wrap__text {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.bathhouse-gallery {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f7f9f9;
+}
+
+.bathhouse-column {
+  display: block;
+  max-width: 1140px;
+  position: relative;
+}
+
+.bathhouse-single {
+  margin-bottom: 20px;
+}
+
+.bathhouse-single__item {
+  max-width: 1140px;
+  outline: none;
+}
+
+.bathhouse-single__img {
+  width: 100%;
+}
+
+.bathhouse-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.bathhouse-nav__item {
+  outline: none;
+}
+
+.bathhouse-nav__img {
+  width: 100%;
+  outline: none;
+}
+
+.bathhouse-left-arrow {
+  position: absolute;
+  outline: none;
+  left: 8px;
+  bottom: 45px;
+}
+
+.bathhouse-left-arrow:hover {
+  cursor: pointer;
+}
+
+.bathhouse-right-arrow {
+  position: absolute;
+  outline: none;
+  right: 8px;
+  bottom: 45px;
+}
+
+.bathhouse-right-arrow:hover {
+  cursor: pointer;
+}
+
+.bathhouse-post {
+  padding: 40px 0;
+}
+
+.bathhouse-post__title {
+  font-size: 30px;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.bathhouse-post__text {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+@media (max-width: 1200px) {
+  .bathhouse-pictures-left {
+    display: none;
+  }
+  .bathhouse-pictures-right {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

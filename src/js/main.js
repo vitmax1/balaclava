@@ -16,4 +16,24 @@
 				prevArrow: $('.left-arrow'),
 				nextArrow: $('.right-arrow')
 			});
+
+			$('.bathhouse-single').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '.bathhouse-nav'
+			});
+
+			$('.bathhouse-nav').slick({
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				asNavFor: '.bathhouse-single',
+				dots: false,
+				arrows: true,
+				focusOnSelect: true,
+				prevArrow: $('.bathhouse-left-arrow'),
+				nextArrow: $('.bathhouse-right-arrow')
+			});
+
 		});
