@@ -2178,7 +2178,8 @@ template {
 
 /* Импорт стилей bathhouse */
 .bathhouse {
-  background: url("../img/bathhouse/bathhouse.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/bathhouse/bathhouse.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/bathhouse/bathhouse.jpg") no-repeat;
   background-size: cover;
   height: 560px;
 }
@@ -2366,6 +2367,87 @@ template {
   font-size: 16px;
   line-height: 25px;
   text-align: justify;
+}
+
+.bathhouse-contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/bathhouse/bath-form-img.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/bathhouse/bath-form-img.jpg") no-repeat;
+  background-size: cover;
+  height: 680px;
+  padding: 30px 0;
+}
+
+.bathhouse-contact__title {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Heavy';
+  text-align: center;
+}
+
+.bathhouse-contact__features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bathhouse-contact__item {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  text-align: center;
+}
+
+.bathhouse-contact__feat {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.bathhouse-contact__text {
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.bathhouse-form {
+  margin-top: 50px;
+}
+
+.bath-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.bath-input {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  height: 53px;
+  padding-left: 20px;
+}
+
+.bath-textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bath-input__textarea {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 95px;
+  padding-left: 20px;
+}
+
+.bath-input__textarea:placeholder {
+  position: relative;
+  top: -100px;
 }
 
 @media (max-width: 1200px) {
