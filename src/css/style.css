@@ -2181,7 +2181,7 @@ template {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/bathhouse/bathhouse.jpg") no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/bathhouse/bathhouse.jpg") no-repeat;
   background-size: cover;
-  height: 560px;
+  padding-bottom: 90px;
 }
 
 .bathhouse-features {
@@ -2294,36 +2294,45 @@ template {
 
 .bathhouse-column {
   display: block;
-  max-width: 1140px;
+  position: relative;
+}
+
+.bathhouse-column__navi {
+  display: block;
   position: relative;
 }
 
 .bathhouse-single {
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.bathhouse-single__leftarrow {
+  display: none;
+}
+
+.bathhouse-single__rightarrow {
+  display: none;
 }
 
 .bathhouse-single__item {
-  max-width: 1140px;
   outline: none;
 }
 
-.bathhouse-single__img {
-  width: 100%;
+.bathhouse-single img {
+  display: block;
+  max-width: 100%;
 }
 
 .bathhouse-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  max-width: 1090px;
-  margin: auto;
+  margin: 0 20px;
+  display: block;
 }
 
 .bathhouse-nav__item {
   outline: none;
-  padding: 0 5px;
+  margin: 0 7px;
+  cursor: pointer;
 }
 
 .bathhouse-nav__img {
@@ -2334,8 +2343,8 @@ template {
 .bathhouse-left-arrow {
   position: absolute;
   outline: none;
-  left: 8px;
-  bottom: 45px;
+  left: 5px;
+  bottom: 35px;
 }
 
 .bathhouse-left-arrow:hover {
@@ -2345,8 +2354,8 @@ template {
 .bathhouse-right-arrow {
   position: absolute;
   outline: none;
-  right: 8px;
-  bottom: 45px;
+  right: 5px;
+  bottom: 35px;
 }
 
 .bathhouse-right-arrow:hover {
@@ -2373,7 +2382,6 @@ template {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/bathhouse/bath-form-img.jpg") no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/bathhouse/bath-form-img.jpg") no-repeat;
   background-size: cover;
-  height: 680px;
   padding: 30px 0;
 }
 
@@ -2430,6 +2438,8 @@ template {
       flex-basis: 33%;
   height: 53px;
   padding-left: 20px;
+  border: none;
+  outline: none;
 }
 
 .bath-textarea {
@@ -2443,19 +2453,242 @@ template {
       flex-basis: 100%;
   height: 95px;
   padding-left: 20px;
+  border: none;
 }
 
-.bath-input__textarea:placeholder {
-  position: relative;
-  top: -100px;
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .bathhouse-pictures-left {
     display: none;
   }
   .bathhouse-pictures-right {
     display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bathhouse-title {
+    line-height: 80px;
+    font-size: 90px;
+    margin: 80px 0 0px 0;
+  }
+  .bathhouse-title__two {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .bathhouse-title__two:after {
+    width: 580px;
+    margin-top: 15px;
+  }
+  .bathhouse-subtitle {
+    max-width: 770px;
+    margin-bottom: 40px;
+    line-height: 26px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bathhouse {
+    padding-bottom: 60px;
+  }
+  .bathhouse-contact__title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .bathhouse-title {
+    line-height: 80px;
+    font-size: 70px;
+    margin: 80px 0 0px 0;
+  }
+  .bathhouse-title__two {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .bathhouse-title__two:after {
+    width: 500px;
+    margin-top: 15px;
+  }
+  .bathhouse-subtitle {
+    max-width: 770px;
+    margin-bottom: 40px;
+    line-height: 26px;
+    font-size: 16px;
+  }
+  .bathhouse-wrap__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 350px;
+  }
+  .bath-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .bath-input {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  .bath-textarea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bath-input__textarea {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 95px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bathhouse-title {
+    line-height: 80px;
+    font-size: 64px;
+    margin: 70px 0 0px 0;
+  }
+  .bathhouse-title__two {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .bathhouse-title__two:after {
+    width: 500px;
+    margin-top: 15px;
+  }
+  .bathhouse-subtitle {
+    max-width: 670px;
+    margin-bottom: 40px;
+    line-height: 26px;
+    font-size: 14px;
+  }
+  .bathhouse-contact__features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bathhouse-contact__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: auto;
+  }
+  .bathhouse-contact__text {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 680px) {
+  .bathhouse-single {
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .bathhouse-single__leftarrow {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+  }
+  .bathhouse-single__rightarrow {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+  }
+  .bathhouse-nav {
+    display: none;
+  }
+  .bathhouse-left-arrow {
+    display: none;
+  }
+  .bathhouse-right-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 652px) {
+  .bathhouse-title {
+    line-height: 60px;
+    font-size: 60px;
+    margin: 80px 0 0px 0;
+  }
+  .bathhouse-title__two {
+    font-size: 30px;
+    text-align: center;
+  }
+  .bathhouse-title__two:after {
+    width: 450px;
+    margin-top: 15px;
+  }
+  .bathhouse-subtitle {
+    max-width: 610px;
+    margin-bottom: 40px;
+    line-height: 26px;
+  }
+  .bathhouse-wrap__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 380px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .bathhouse-title {
+    line-height: 50px;
+    font-size: 50px;
+    margin: 60px 0 0px 0;
+  }
+  .bathhouse-title__two {
+    font-size: 24px;
+  }
+  .bathhouse-title__two:after {
+    max-width: 400px;
+    margin-top: 15px;
+  }
+  .bathhouse-subtitle {
+    max-width: 450px;
+    margin-bottom: 40px;
+    line-height: 26px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 525px) {
+  .bathhouse-title {
+    line-height: 50px;
+    font-size: 40px;
+    margin: 60px 0 0px 0;
+  }
+  .bathhouse-title__two {
+    font-size: 20px;
+  }
+  .bathhouse-title__two:after {
+    width: 250px;
+    margin-top: 15px;
+  }
+  .bathhouse-subtitle {
+    max-width: 450px;
+    margin-bottom: 40px;
+    line-height: 26px;
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */

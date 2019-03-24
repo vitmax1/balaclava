@@ -1,7 +1,7 @@
 .bathhouse
 	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/bathhouse/bathhouse.jpg') no-repeat
 	background-size: cover
-	height: 560px
+	padding-bottom: 90px
 	&-features
 		padding: 40px 0
 	&-headline
@@ -73,41 +73,47 @@
 		background-color: #f7f9f9
 	&-column                        /* оформление слайдера */
 		display: block
-		max-width: 1140px
 		position: relative
+		&__navi
+			display: block
+			position: relative
 	&-single
 		margin-bottom: 20px
+		cursor: pointer
+		&__leftarrow
+			display: none
+		&__rightarrow
+			display: none
 		&__item
-			max-width: 1140px
-			outline: none
-		&__img
-			width: 100%	
+			outline: none	
+	&-single img
+		display: block
+		max-width: 100%
 	&-nav
-		display: flex
-		justify-content: space-around
-		max-width: 1090px
-		margin: auto
+		margin: 0 20px
+		display: block
 		&__item
 			outline: none
-			padding: 0 5px
+			margin: 0 7px
+			cursor: pointer
 		&__img
 			width: 100%
 			outline: none
 	&-left-arrow
 		position: absolute
 		outline: none
-		left: 8px
-		bottom: 45px
+		left: 5px
+		bottom: 35px
 		&:hover
 			cursor: pointer
 	&-right-arrow
 		position: absolute
 		outline: none
-		right: 8px
-		bottom: 45px
+		right: 5px
+		bottom: 35px
 		&:hover
 			cursor: pointer
-	&-post
+	&-post                            // оформление поста
 		padding: 40px 0
 		&__title
 			font-size: 30px
@@ -116,10 +122,9 @@
 			font-size: 16px
 			line-height: 25px
 			text-align: justify
-	&-contact
+	&-contact                         // оформление контактов и формы
 		background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/bathhouse/bath-form-img.jpg') no-repeat
 		background-size: cover
-		height: 680px
 		padding: 30px 0
 		&__title
 			font-size: 48px
@@ -151,6 +156,8 @@
 		flex-basis: 33%
 		height: 53px
 		padding-left: 20px
+		border: none
+		outline: none
 	&-textarea
 		display: flex
 	&-input
@@ -158,15 +165,178 @@
 			flex-basis: 100%
 			height: 95px
 			padding-left: 20px
-		&__textarea:placeholder
-			position: relative
-			top: -100px
-@media (max-width: 1200px)   // 1200
+			border: none
+@media (max-width: 1400px)   // 1400  обработка медиа запросов
 	.bathhouse
 		&-pictures-left
 			display: none
 		&-pictures-right
 			display: none
-
-	
+@media (max-width: 1200px)   // 1200
+	.bathhouse
+		// height: 530px
+		&-title
+			line-height: 80px
+			font-size: 90px
+			margin: 80px 0 0px 0
+			&__two
+				font-size: 36px
+				text-align: center
+				margin-top: 30px
+				margin-bottom: 20px
+				&:after
+					width: 580px
+					margin-top: 15px
+		&-subtitle
+			max-width: 770px
+			margin-bottom: 40px
+			line-height: 26px
+			font-size: 16px
+@media (max-width: 1000px)   // 1000
+	.bathhouse
+		padding-bottom: 60px
+		&-contact
+			&__title
+				font-size: 40px
+@media (max-width: 992px)   // 992
+	.bathhouse
+		&-title
+			line-height: 80px
+			font-size: 70px
+			margin: 80px 0 0px 0
+			&__two
+				font-size: 34px
+				text-align: center
+				margin-top: 30px
+				margin-bottom: 20px
+				&:after
+					width: 500px
+					margin-top: 15px
+		&-subtitle
+			max-width: 770px
+			margin-bottom: 40px
+			line-height: 26px
+			font-size: 16px
+		&-wrap                         
+			&__item
+				flex-basis: 50%
+				max-width: 350px
+	.bath
+		&-form
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			margin-bottom: 15px
+		&-input
+			flex-basis: 100%
+			margin-bottom: 10px
+		&-textarea
+			display: flex
+		&-input
+			&__textarea
+				flex-basis: 100%
+				height: 95px
+				padding-left: 20px
+@media (max-width: 768px)   // 768
+	.bathhouse
+		&-title
+			line-height: 80px
+			font-size: 64px
+			margin: 70px 0 0px 0
+			&__two
+				font-size: 30px
+				text-align: center
+				margin-top: 20px
+				margin-bottom: 20px
+				&:after
+					width: 500px
+					margin-top: 15px
+		&-subtitle
+			max-width: 670px
+			margin-bottom: 40px
+			line-height: 26px
+			font-size: 14px
+		&-contact
+			&__features
+				flex-direction: column
+			&__item
+				flex-basis: 100%
+				margin: auto
+			&__text
+				max-width: 400px
+@media (max-width: 680px)   // 680
+	.bathhouse
+		&-single
+			margin-bottom: 0
+			margin-left: 20px
+			margin-right: 20px
+			&__leftarrow
+				display: block
+				position: absolute
+				left: 0
+				bottom: 40%
+			&__rightarrow
+				display: block
+				position: absolute
+				right: 0
+				bottom: 40%
+		&-nav
+			display: none
+		&-left-arrow
+			display: none
+		&-right-arrow
+			display: none
+@media (max-width: 652px)   // 652
+	.bathhouse
+		&-title
+			line-height: 60px
+			font-size: 60px
+			margin: 80px 0 0px 0
+			&__two
+				font-size: 30px
+				text-align: center
+				&:after
+					width: 450px
+					margin-top: 15px
+		&-subtitle
+			max-width: 610px
+			margin-bottom: 40px
+			line-height: 26px
+		&-wrap                         
+			&__item
+				flex-basis: 100%
+				max-width: 380px
+				margin: auto
+@media (max-width: 600px)   // 600
+	.bathhouse
+		&-title
+			line-height: 50px
+			font-size: 50px
+			margin: 60px 0 0px 0
+			&__two
+				font-size: 24px
+				&:after
+					max-width: 400px
+					margin-top: 15px
+		&-subtitle
+				max-width: 450px
+				margin-bottom: 40px
+				line-height: 26px
+				font-size: 14px
+@media (max-width: 525px)   // 525
+	.bathhouse
+		&-title
+			line-height: 50px
+			font-size: 40px
+			margin: 60px 0 0px 0
+			&__two
+				font-size: 20px
+				&:after
+					width: 250px
+					margin-top: 15px
+		&-subtitle
+				max-width: 450px
+				margin-bottom: 40px
+				line-height: 26px
+				font-size: 14px
 

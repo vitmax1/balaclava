@@ -92,15 +92,21 @@
 			</div>
 		</section>
 
-		<section class="bathhouse-gallery">
+		<section class="bathhouse-gallery slider">
 			<div class="container">
 				<div class="bathhouse-column">
+					<span class="bathhouse-single__leftarrow"><img src="img/slider/left-arrow.png" alt=""></span>
 					<div class="bathhouse-single">
 						<div class="bathhouse-single__item"><img src="img/bathhouse/bath-slider/bath-slider.jpg" alt="" class="bathhouse-single__img"></div>
 						<div class="bathhouse-single__item"><img src="img/bathhouse/bath-slider/bath-slider1.jpg" alt="" class="bathhouse-single__img"></div>
 						<div class="bathhouse-single__item"><img src="img/bathhouse/bath-slider/bath-slider.jpg" alt="" class="bathhouse-single__img"></div>
 						<div class="bathhouse-single__item"><img src="img/bathhouse/bath-slider/bath-slider1.jpg" alt="" class="bathhouse-single__img"></div>
 					</div>
+					<span class="bathhouse-single__rightarrow"><img src="img/slider/right-arrow.png" alt=""></span>
+					</div>
+					<!-- /column -->
+				<div class="bathhouse-column__navi"> 
+					<span class="bathhouse-left-arrow"><img src="img/slider/left-arrow.png" alt=""></span>
 					<div class="bathhouse-nav">
 						<div class="bathhouse-nav__item"><img src="img/bathhouse/bath-slider/bath-nav-slide-1.jpg" alt="" class="bathhouse-nav__img"></div>
 						<div class="bathhouse-nav__item"><img src="img/bathhouse/bath-slider/bath-nav-slide-2.jpg" alt="" class="bathhouse-nav__img"></div>
@@ -112,10 +118,8 @@
 						<div class="bathhouse-nav__item"><img src="img/bathhouse/bath-slider/bath-nav-slide-5.jpg" alt="" class="bathhouse-nav__img"></div>
 						<div class="bathhouse-nav__item"><img src="img/bathhouse/bath-slider/bath-nav-slide-6.jpg" alt="" class="bathhouse-nav__img"></div>
 					</div>
-					<img src="img/slider/left-arrow.png" class="bathhouse-left-arrow" alt="">
-					<img src="img/slider/right-arrow.png" class="bathhouse-right-arrow" alt="">
+					<span class="bathhouse-right-arrow"><img src="img/slider/right-arrow.png" alt=""></span>
 				</div>
-				<!-- /column -->
 			</div>
 			<!-- container -->
 
@@ -190,12 +194,76 @@
 
 
 			</div>
+			<!-- /container -->
 		</section>
 
 	 <!-- Скрипты -->
  	<script src="js/jquery-3.3.1.min.js"></script>
  	<script src="js/slick.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+	/* Слайдер для бани */
+	$(document).ready(function () {
+		$('.bathhouse-single').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: $('.bathhouse-single__leftarrow'),
+			nextArrow: $('.bathhouse-single__rightarrow'),
+			arrows: false,
+			fade: true,
+			asNavFor: '.bathhouse-nav',
+			responsive: [{
+			breakpoint: 680,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: true
+			}
+			}]
+		});
+		$('.bathhouse-nav').slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			asNavFor: '.bathhouse-single',
+			dots: false,
+			arrows: true,
+			focusOnSelect: true,
+			prevArrow: $('.bathhouse-left-arrow'),
+			nextArrow: $('.bathhouse-right-arrow'),
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 920,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+			}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+			}
+			},
+			{
+				breakpoint: 680,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+					slidesToScroll: 1
+
+			}
+			}
+			]
+		});
+		});
+	</script>
 
 </body>
 </html>
