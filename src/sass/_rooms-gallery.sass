@@ -12,9 +12,12 @@
 	bottom: 55px
 	&:hover
 		cursor: pointer
+.prev-arrow
+	display: none
+.next-arrow
+	display: none
 .column
-	display: block
-	max-width: 460px
+	position: relative
 .rooms
 	&-wrap
 		display: flex
@@ -47,6 +50,8 @@
 		margin-bottom: 10px
 		&__slide
 			width: 100%
+	&-single img
+		width: 100%
 	&-nav
 		max-width: 410px
 		margin: auto
@@ -123,20 +128,50 @@
 		color: #ffffff
 		z-index: 3
 @media (max-width: 1200px)   // 1200
- .adding
-	 &-headline
-		 text-align: center
-	 &-wrap
-		 justify-content: space-evenly
+	.headline-rooms
+		text-align: center
+ 	.adding
+	  &-headline
+		  text-align: center
+	  &-wrap
+		  justify-content: space-evenly
 @media (max-width: 1000px)   // 1000
 	.rooms
 		&-wrap
 			flex-direction: column
-@media (max-width: 768px)   // 768
+	.column
+		margin: auto
+@media (max-width: 920px)   // 920
+	.column
+		margin: auto
+	.rooms
+		&-nav
+			display: none
+	.left-arrow
+		display: none
+	.right-arrow
+		display: none
+	.prev-arrow
+		display: block
+		position: absolute
+		left: -20px
+		bottom: 140px
+		&:hover
+			cursor: pointer
+	.next-arrow
+		display: block
+		position: absolute
+		right: -20px
+		bottom: 140px
+		&:hover
+			cursor: pointer
 	.adding
 		&-headline
 			font-size: 24px
-@media (max-width: 640px)
+@media (max-width: 640px)      ////////////
+	.rooms
+		&-single
+			width: 90%
 	.adding
 		&-headline
 			font-size: 20px

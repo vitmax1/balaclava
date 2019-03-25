@@ -2006,9 +2006,16 @@ template {
   cursor: pointer;
 }
 
+.prev-arrow {
+  display: none;
+}
+
+.next-arrow {
+  display: none;
+}
+
 .column {
-  display: block;
-  max-width: 460px;
+  position: relative;
 }
 
 .rooms-wrap {
@@ -2061,6 +2068,10 @@ template {
 }
 
 .rooms-single__slide {
+  width: 100%;
+}
+
+.rooms-single img {
   width: 100%;
 }
 
@@ -2178,10 +2189,13 @@ template {
 }
 
 @media (max-width: 1200px) {
-  .adding-headline {
+  .headline-rooms {
     text-align: center;
   }
-  .adding-wrap {
+  .headline-rooms .adding-headline {
+    text-align: center;
+  }
+  .headline-rooms .adding-wrap {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -2195,15 +2209,51 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .column {
+    margin: auto;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
+  .column {
+    margin: auto;
+  }
+  .rooms-nav {
+    display: none;
+  }
+  .left-arrow {
+    display: none;
+  }
+  .right-arrow {
+    display: none;
+  }
+  .prev-arrow {
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: 140px;
+  }
+  .prev-arrow:hover {
+    cursor: pointer;
+  }
+  .next-arrow {
+    display: block;
+    position: absolute;
+    right: -20px;
+    bottom: 140px;
+  }
+  .next-arrow:hover {
+    cursor: pointer;
+  }
   .adding-headline {
     font-size: 24px;
   }
 }
 
 @media (max-width: 640px) {
+  .rooms-single {
+    width: 90%;
+  }
   .adding-headline {
     font-size: 20px;
   }
@@ -2731,7 +2781,7 @@ template {
   }
 }
 
-/* Импорт стилей bathhouse */
+/* Импорт стилей contacts */
 .contacts-block {
   padding: 41px 0 49px 0;
 }
@@ -2951,4 +3001,6 @@ template {
     width: 250px;
   }
 }
+
+/* Импорт стилей pony */
 /*# sourceMappingURL=style.css.map */
