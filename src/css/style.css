@@ -1543,7 +1543,7 @@ template {
 }
 
 .places-headline__page {
-  text-align-last: left;
+  text-align: left;
 }
 
 .places-description {
@@ -1660,6 +1660,9 @@ template {
   .places-headline {
     font-size: 24px;
   }
+  .places-headline__page {
+    text-align: center;
+  }
   .places-description {
     max-width: 550px;
     font-size: 14px;
@@ -1677,8 +1680,15 @@ template {
     max-width: 400px;
     margin-bottom: 20px;
   }
-  .places-row__card:last-child {
-    display: block;
+  .places-row__cardpage-last {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .places-headline__page {
+    font-size: 20px;
+    text-align: center;
   }
 }
 

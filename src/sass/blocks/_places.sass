@@ -4,7 +4,7 @@
 		text-align: center
 		font-size: 30px
 		&__page
-			text-align-last: left
+			text-align: left
 	&-description
 		margin: auto
 		max-width: 760px
@@ -79,6 +79,8 @@
 	.places
 		&-headline
 			font-size: 24px
+			&__page
+				text-align: center
 		&-description
 			max-width: 550px
 			font-size: 14px
@@ -88,8 +90,16 @@
 			&__card
 				max-width: 400px
 				margin-bottom: 20px
-				&:last-child
-					display: block
+				// &:last-child
+				// 	display: block
+			&__cardpage-last
+				display: none
+@media (max-width: 500px)   // 500
+	.places
+		&-headline
+			&__page
+				font-size: 20px
+				text-align: center
 
 
 	
