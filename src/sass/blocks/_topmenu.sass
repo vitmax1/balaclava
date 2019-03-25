@@ -6,6 +6,7 @@
 			align-items: center
 			justify-content: space-between
 			padding: 13px 0
+			position: relative
 		&-tel
 			font-size: 19px
 			text-decoration: none
@@ -13,6 +14,14 @@
 			color: #2a2a2a
 			+bold
 	&-menu
+		&__btn
+			display: none
+			width: 45px
+			height: 35px
+			position: absolute
+			right: 0
+			top: 0
+			margin-top: 20px
 		&-list
 			display: flex
 			padding-left: 0
@@ -46,49 +55,36 @@
 			margin-right: -25px
 @media (max-width: 1200px)   // 1200
 	.top
-		&-nav
-			&-logo
-				display: none
+		&-geotag
+			display: none
 		&-menu
 			&-list
 				flex-wrap: wrap
 		&-geotag
 			&-img
 				display: none
-@media (max-width: 768px)   // 768
+@media (max-width: 992px)   // 992
 	.top
 		&-nav
 			&-box
+				flex-direction: column
+				align-items: flex-start	
+				padding-bottom: 20px	
 		&-menu
-			&-list
-				&__item
-					flex-basis: 50%
-					&:nth-child(even)
-						border-right: none
-@media (max-width: 652px)   // 652
-	.top
-		&-nav
-			&-box
-		&-menu
-			&-list
-				&__item
-					flex-basis: 90%
-					&:nth-child(odd)
-						border-right: none
-@media (max-width: 568px)   // 568
-	.top
-		&-nav
-			&-box
+			margin: auto
+			&__btn
 				display: block
-		&-menu
-			&-list
-				&__item
-					flex-basis: 50%	
-		&-geotag
-			margin-left: 20px
-@media (max-width: 480px)   // 480
-	.top
-		&-menu
 			&-list
 				display: block
+				text-align: center
+				margin-bottom: 0px
+				&__item
+					padding: 10px 0
+					border-bottom: #dfdfdf 1px dotted
+					border-right: none
+					&:last-child
+						border: none
+				&__hide
+					transition: all 0.5s ease
+					display: none
 

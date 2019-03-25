@@ -3,9 +3,18 @@
 		display: flex
 		padding: 13px 0
 		align-items: center
+		position: relative
 	&-logo
 		margin-right: 70px
 .menu
+	&__btn
+		display: none
+		width: 45px
+		height: 35px
+		position: absolute
+		right: 0
+		top: 0		
+		margin-top: 20px
 	&-list
 		display: flex
 		padding-left: 0
@@ -94,9 +103,8 @@
 		&-eagle
 			right: 190px
 @media (max-width: 1200px)   // 1200
-	.nav
-		&-logo
-			margin-right: 35px
+	.menu
+		margin: auto
 	.hero
 		height: 600px
 	.headline
@@ -111,81 +119,27 @@
 			display: none
 		&-right
 			display: none
-@media (max-width: 992px)   // 992
-	.menu
-		margin: auto
-	.nav
-		&-logo
-			display: none
-@media (max-width: 768px)   // 768
+@media (max-width: 992px)   // 992 //////////////////////////////
 	.nav
 		&-box
-			padding: 0
+			flex-direction: column
+			align-items: flex-start
+			padding-bottom: 20px
 	.menu
+		margin: auto
+		&__btn
+			display: block
 		&-list
-			flex-wrap: wrap
+			display: block
+			text-align: center
+			margin-bottom: 0px
 			&__item
-				font-size: 11px
-				padding: 10px 15px	
-	.hero
-		height: 500px
-	.headline
-		font-size: 80px
-		margin-top: 110px
-		margin-bottom: 15px
-		&:after
-			width: 380px
-		&-subtitle
-			font-size: 14px
-			max-width: 500px
-@media (max-width: 620px)   // 620 
-	.menu
-		&-list
-			&__item
-				font-size: 11px
-				padding: 8px 5px
-@media (max-width: 576px)   // 576 
-	.menu
-		&-list
-			&__item
-				font-size: 11px
-				padding: 8px 5px	
-	.hero
-		height: 400px
-	.headline
-		font-size: 65px
-		margin-top: 85px
-		margin-bottom: 15px
-		&:after
-			width: 280px
-		&-subtitle
-			font-size: 13px
-			max-width: 400px
-			line-height: 20px
-@media (max-width: 520px)  // 520 
-	.menu
-		&-list
-			max-width: 240px
-	.hero
-		height: 350px
-	.headline
-		font-size: 55px
-		margin-top: 60px
-		margin-bottom: 15px
-		&:after
-			width: 240px
-		&-subtitle
-			font-size: 11px
-			max-width: 300px
-			line-height: 18px
-@media (max-width: 350px)  // 350 
-	.headline
-		font-size: 45px
-		margin-top: 60px
-		margin-bottom: 15px
-		&:after
-			width: 220px
-		&-subtitle
-			font-size: 11px
-			max-width: 280px
-			line-height: 16px			
+				padding: 10px 0
+				border-bottom: #dfdfdf 1px dotted
+				border-right: none
+				&:last-child
+					border: none
+			&__hide
+				display: none
+				transition: all 0.5s ease
+				
