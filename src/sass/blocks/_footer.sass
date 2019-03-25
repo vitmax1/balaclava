@@ -1,7 +1,7 @@
 .footer
 	padding: 30px 0
 	background-color: #393939
-	height: 550px
+	// height: 550px
 	&-nav
 		&-box
 			display: flex
@@ -53,59 +53,27 @@
 	line-height: 17px
 @media (max-width: 1200px)   // 1200
 	.footer
-		&-nav
-			&-logo
-				display: none
-	.footer
 		&-menu
 			&-list
-				padding-left: 5px
+				padding-left: 0px
 				flex-wrap: wrap
+				justify-content: center
 		&-geotag
+			display: none
 			&-img
-				display: none	
+				display: none
 	.copyright
 		max-width: 680px
-@media (max-width: 768px)   // 768
+@media (max-width: 992px)   // 992
 	.footer
 		&-nav
 			&-box
-		&-menu
-			&-list
-				&__item
-					flex-basis: 50%
+				flex-direction: column
+				align-items: center
 	.copyright
 		max-width: 580px
-@media (max-width: 652px)   // 652
-	.footer
-		&-nav
-			&-box
-		&-menu
-			&-list
-				&__item
-					flex-basis: 90%
+@media (max-width: 650px)   // 650
 	.copyright
-		max-width: 510px
-@media (max-width: 568px)   // 568
-	.footer
-		&-nav
-			&-box
-				display: block
-		&-menu
-			&-list
-				&__item
-					flex-basis: 50%	
-		&-geotag
-			margin-left: 20px
-	.copyright
-		max-width: 400px
-@media (max-width: 480px)   // 480
-	.footer
-		&-menu
-			&-list
-				display: block
-	.copyright
-		max-width: 300px
-@media (max-width: 400px)   // 400
-	.copyright
-		max-width: 250px
+		max-width: 380px
+		padding: 0 10px
+		 

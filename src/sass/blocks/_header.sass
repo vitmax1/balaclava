@@ -36,7 +36,7 @@
 				color: #3fc380
 				cursor: pointer
 .hero
-	background: url('../img/header-bg.jpg') no-repeat
+	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../img/header-bg.jpg') no-repeat
 	background-size: cover
 	height: 700px
 	&-headline
@@ -142,4 +142,50 @@
 			&__hide
 				display: none
 				transition: all 0.5s ease
-				
+@media (max-width: 768px) /// 768 ///
+	.hero
+		height: auto
+		padding-bottom: 70px
+	.headline
+		font-size: 100px
+		margin: 60px 0 30px 0
+		&:after
+			margin-top: 10px
+			width: 480px
+		&-subtitle
+			max-width: 670px
+			line-height: 26px
+			font-size: 16px
+@media (max-width: 640px)  //////////////// 640
+	.headline
+		font-size: 80px
+		&:after
+			margin-top: 10px
+			width: 380px
+		&-subtitle
+			max-width: 600px
+			line-height: 26px
+			font-size: 14px
+@media (max-width: 480px)  ////////////////  480
+	.hero
+		padding-bottom: 50px
+	.headline
+		font-size: 60px
+		margin: 40px 0 20px 0
+		&:after
+			margin-top: 10px
+			width: 280px
+		&-subtitle
+			max-width: 450px
+			line-height: 20px
+			font-size: 13px
+@media (max-width: 380px)  ////////////////  380
+	.headline
+		font-size: 50px
+		&:after
+			margin-top: 10px
+			width: 200px
+		&-subtitle
+			padding: 0 10px
+			line-height: 20px
+			font-size: 12px
