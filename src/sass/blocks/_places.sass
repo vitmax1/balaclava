@@ -3,6 +3,8 @@
 	&-headline
 		text-align: center
 		font-size: 30px
+		&__page
+			text-align-last: left
 	&-description
 		margin: auto
 		max-width: 760px
@@ -13,11 +15,13 @@
 	&-row
 		display: flex
 		justify-content: space-between
+		flex-wrap: wrap
 		margin-bottom: 40px
 		&__card
 			background-color: #f7f9f9
 			flex-basis: 32%
 			border-bottom: 3px solid #cccccc
+			margin-bottom: 20px
 			&:after
 				display: block
 				position: relative
@@ -32,6 +36,25 @@
 			&:hover
 				border-bottom: 3px solid #3fc380
 				cursor: pointer
+		&__cardpage
+			&:after
+				display: block
+				position: relative
+				content: ''
+				width: 40px
+				height: 2px
+				background-color: #cccccc
+				bottom:	120px
+				left: 23px
+			&:hover:after
+			 	background-color: #000
+			&:hover
+				border-bottom: 3px solid #3fc380
+				cursor: pointer
+		&__cardpage-last
+			opacity: 0
+			&:hover
+				cursor: default			
 	&-name
 		font-size: 19px
 		line-height: 24px

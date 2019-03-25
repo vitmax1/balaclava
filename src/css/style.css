@@ -1542,6 +1542,10 @@ template {
   font-size: 30px;
 }
 
+.places-headline__page {
+  text-align-last: left;
+}
+
 .places-description {
   margin: auto;
   max-width: 760px;
@@ -1558,6 +1562,8 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -1566,6 +1572,7 @@ template {
   -ms-flex-preferred-size: 32%;
       flex-basis: 32%;
   border-bottom: 3px solid #cccccc;
+  margin-bottom: 20px;
 }
 
 .places-row__card:after {
@@ -1586,6 +1593,34 @@ template {
 .places-row__card:hover {
   border-bottom: 3px solid #3fc380;
   cursor: pointer;
+}
+
+.places-row__cardpage:after {
+  display: block;
+  position: relative;
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: #cccccc;
+  bottom: 120px;
+  left: 23px;
+}
+
+.places-row__cardpage:hover:after {
+  background-color: #000;
+}
+
+.places-row__cardpage:hover {
+  border-bottom: 3px solid #3fc380;
+  cursor: pointer;
+}
+
+.places-row__cardpage-last {
+  opacity: 0;
+}
+
+.places-row__cardpage-last:hover {
+  cursor: default;
 }
 
 .places-name {
