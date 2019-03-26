@@ -2591,8 +2591,8 @@ template {
 }
 
 .bath-input {
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
+  -ms-flex-preferred-size: 32.7%;
+      flex-basis: 32.7%;
   height: 53px;
   padding-left: 38px;
   border: none;
