@@ -147,6 +147,10 @@
 			color: #ffffff
 	&-form
 		margin-top: 50px
+		&__bottombtn
+			text-align: center
+			margin-top: 30px
+			margin-bottom: 30px
 .bath
 	&-form
 		display: flex
@@ -155,17 +159,38 @@
 	&-input
 		flex-basis: 33%
 		height: 53px
-		padding-left: 20px
+		padding-left: 38px
 		border: none
 		outline: none
+		font-size: 12px
+		&__name
+			background: url(../img/form/form-name.png) center left no-repeat
+			background-color: #fff
+			background-position: 12px
+		&__phone
+			background: url(../img/form/form-phone.png) center left no-repeat
+			background-color: #fff
+			background-position: 12px
+		&__email
+			background: url(../img/form/form-email.png) center left no-repeat
+			background-color: #fff
+			background-position: 12px
 	&-textarea
 		display: flex
+		width: 100%
+		resize: none
+		padding-left: 40px
 	&-input
 		&__textarea
 			flex-basis: 100%
 			height: 95px
-			padding-left: 20px
+			padding-top: 20px
+			padding-left: 40px
 			border: none
+			font-size: 12px
+			background: url(../img/form/form-text.png) no-repeat
+			background-color: #fff
+			background-position: 15px 16px
 @media (max-width: 1400px)   // 1400  обработка медиа запросов
 	.bathhouse
 		&-pictures-left
@@ -236,7 +261,7 @@
 			&__textarea
 				flex-basis: 100%
 				height: 95px
-				padding-left: 20px
+				padding-left: 40px
 @media (max-width: 768px)   // 768
 	.bathhouse
 		&-title
