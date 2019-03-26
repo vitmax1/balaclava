@@ -9,10 +9,32 @@
 	<title>Номерной фонд гостевого дома с орлами</title>
 </head>
 <body>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] = m[i] || function () {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(52984642, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/52984642" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
 		<nav class="top-nav">
 			<div class="container">
 				<div class="top-nav-box">
-					<div class="top-nav-logo"><img src="img/balaclava-logo.png" alt="logo Balaclava"></div>
+					<div class="top-nav-logo"><a href="index.html"><img src="img/balaclava-logo.png" alt="logo Balaclava"></a></div>
 					<div class="top-menu">
 						<span class="top-menu__btn"><a href="#"><img src="img/menu-btn.svg" alt=""></a></span>
 						<ul class="top-menu-list top-menu-list__hide">
@@ -70,7 +92,7 @@
 				<span class="rooms-tag">с 1 мая по 10 мая — 3000р.</span>
 				<span class="rooms-tag">с 20 июня до 15 сентября — 5000р</span>
 				<span class="rooms-tag__star">* Все цены могут корректироваться.</span>
-				<button class="button button-success button-white-border">Забронировать!</button>
+				<button class="button button-success button-white-border button-active">Забронировать!</button>
 				</div>
 		</div>
 		<!-- /wrap -->
@@ -110,7 +132,7 @@
 					<span class="rooms-tag">с 1 мая по 10 мая — 3000р.</span>
 					<span class="rooms-tag">с 20 июня до 15 сентября — 5000р</span>
 					<span class="rooms-tag__star">* Все цены могут корректироваться.</span>
-					<button class="button button-success button-white-border">Забронировать!</button>
+					<button class="button button-success button-white-border button-active">Забронировать!</button>
 				</div>
 		</div>
 		<!-- /wrap -->
@@ -146,7 +168,7 @@
 							<span class="rooms-tag">с 1 мая по 10 мая — 2000р.</span>
 							<span class="rooms-tag">с 20 июня до 15 сентября — 2500р</span>
 							<span class="rooms-tag__star">* Все цены могут корректироваться.</span>
-							<button class="button button-success button-white-border">Забронировать!</button>
+							<button class="button button-success button-white-border button-active">Забронировать!</button>
 						</div>
 		</div>
 		<!-- /wrap -->
@@ -181,7 +203,7 @@
 				<span class="rooms-tag">с 1 мая по 10 мая — 1200р.</span>
 				<!-- <span class="rooms-tag">с 20 июня до 15 сентября — 5000р</span> -->
 				<span class="rooms-tag__star">* Все цены могут корректироваться.</span>
-				<button class="button button-success button-white-border">Забронировать!</button>
+				<button class="button button-success button-white-border button-active">Забронировать!</button>
 			</div>
 		</div>
 		<!-- /wrap -->
@@ -216,7 +238,7 @@
 				<!-- <span class="rooms-tag">с 1 мая по 10 мая — 400р.</span> -->
 				<span class="rooms-tag">с 20 июня до 15 сентября — 400р</span>
 				<span class="rooms-tag__star">* Все цены могут корректироваться.</span>
-				<button class="button button-success button-white-border">Забронировать!</button>
+				<button class="button button-success button-white-border button-active">Забронировать!</button>
 			</div>
 		</div>
 		<!-- /wrap -->
@@ -280,7 +302,7 @@
 			<nav class="footer-nav">
 				<div class="container">
 					<div class="footer-nav-box">
-						<div class="footer-nav-logo"><img src="img/balaclava-logo.png" alt="logo Balaclava"></div>
+						<div class="footer-nav-logo"><a href="index.html"><img src="img/balaclava-logo.png" alt="logo Balaclava"></a></div>
 						<div class="footer-menu">
 							<ul class="footer-menu-list">
 								<li class="footer-menu-list__item"><a href="index.html">Главная</a></li>
@@ -306,7 +328,26 @@
 				использование без письменного разрешения не допускаются и влекут за собой ответственность.
 			</p>
 		</footer>
-
+	<!-- Модалки -->
+	<div class="modal" id="modal">
+		<div class="modal-dialog">
+			<button class="modal-dialog__close" id="close">&times;</button>
+			<h3 class="modal__title">Арендовать номер прямо сейчас!</h3>
+			<form action="mail.php" method="post" class="form modal__form" name="form" id="form">
+				<div class="modal-inputs">
+					<input type="text" name="username" class="form__input modal__input invalid-user" placeholder="Ваше имя...">
+					<input type="tel" name="userphone" class="form__input modal__input invalid-phone phone"
+						placeholder="Ваш номер телефона...">
+					<input type="email" name="email" class="form__input modal__input invalid-email" placeholder="Ваш e-mail...">
+				</div>
+				<!-- /.modal-inputs inputs -->
+				<textarea class="modal__textarea invalid-massage" name="massage" placeholder="Ваше сообщение..."></textarea>
+				<button class="button button-success modal-button">арендовать номер!</button>
+			</form>
+		</div>
+		<!-- /.modal-dilog -->
+	</div>
+	<!-- /.modal -->
 	<!-- Скрипты -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick.min.js"></script>

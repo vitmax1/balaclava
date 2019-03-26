@@ -1,0 +1,120 @@
+.modal
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.5)
+	display: none
+	z-index: 4
+	&_active
+		display: block
+	&-dialog
+		position: relative
+		background-color: #f7f9f9
+		margin: auto
+		max-width: 800px
+		top: 30%
+		width: 100%
+		min-height: 200px
+		background-color: #fff 
+		padding-bottom: 10px
+		z-index: 5
+		&__close
+			position: absolute
+			top: 0
+			right: 0
+			padding: 15px
+			border-radius: 0
+			background-color: transparent
+			border: none
+			font-size: 20px
+			color: #ffffff
+			border: none
+			outline: none
+			&:hover
+				cursor: pointer
+	&__title
+		padding: 20px 0
+		font-size: 18px
+		color: #fff
+		background-color: #3fc380
+		font-family: 'RobotoRegular', sans-serif
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
+	&__form
+		margin: 20px 30px
+	&-inputs
+		display: flex
+		justify-content: space-between
+	&__input
+		width: 32.5%
+		height: 53px
+		border: 1px solid #ededed
+		font-size: 12px
+		padding-left: 45px
+		&:nth-child(1)
+			background: url(../img/form/form-name.png) center left no-repeat
+			background-color: #fff
+			background-position: 12px
+		&:nth-child(2)
+			background: url(../img/form/form-phone.png) center left no-repeat
+			background-color: #fff
+			background-position: 12px
+		&:nth-child(3)
+			background: url(../img/form/form-email.png) center left no-repeat
+			background-color: #fff
+			background-position: 12px
+	&__textarea
+		width: 100%
+		height: 93px
+		resize: none
+		margin-top: 12px
+		border: 1px solid #ededed
+		font-size: 12px
+		padding-top: 20px
+		padding-left: 40px
+		background: url(../img/form/form-text.png) no-repeat
+		background-color: #fff
+		background-position: 15px 16px
+	&-button
+		display: block
+		margin: auto
+		margin-top: 28px
+
+	// &-form
+	// 		display: flex
+	// 		justify-content: space-between
+	// 		flex-direction: column
+	// 		margin-bottom: 15px
+	// 	&-form #phone-error
+	// 		left: 0
+	// 		top: 59px
+	// 	&-form #email-error
+	// 		left: 0
+	// 		top: 140px
+	// 	&-input
+	// 		width: 100%
+	// 		margin-bottom: 25px
+	// 	&-textarea
+	// 		display: flex
+	// 	&-input
+	// 		&__textarea
+	// 			flex-basis: 100%
+	// 			height: 95px
+	// 			padding-left: 40px
+	// &-form
+	// 	display: flex
+	// 	flex-direction: column
+	// &-form #username-error
+	// 	position: relative
+	// 	top: -7px
+	// 	left: 27px
+	// &-form #phone-error
+	// 	position: relative
+	// 	top: -7px
+	// 	left: 27px
+	// &__input
+	// 	margin-bottom: 15px
+	// 	height: 48px		
