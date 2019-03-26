@@ -2195,11 +2195,6 @@ template {
   .headline-rooms .adding-headline {
     text-align: center;
   }
-  .headline-rooms .adding-wrap {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -2231,7 +2226,7 @@ template {
     display: block;
     position: absolute;
     left: -20px;
-    bottom: 140px;
+    bottom: 47%;
   }
   .prev-arrow:hover {
     cursor: pointer;
@@ -2240,7 +2235,7 @@ template {
     display: block;
     position: absolute;
     right: -20px;
-    bottom: 140px;
+    bottom: 47%;
   }
   .next-arrow:hover {
     cursor: pointer;
@@ -2250,17 +2245,79 @@ template {
   }
 }
 
+@media (max-width: 768px) {
+  .adding-headline {
+    text-align: center;
+  }
+  .adding-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media (max-width: 640px) {
   .rooms-single {
-    width: 90%;
+    width: 100%;
   }
   .adding-headline {
     font-size: 20px;
   }
 }
 
+@media (max-width: 568px) {
+  .column {
+    max-width: 400px;
+  }
+  .headline-rooms {
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 500px) {
+  .column {
+    max-width: 350px;
+  }
   .adding-headline {
+    font-size: 16px;
+  }
+  .adding-wrap__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .column {
+    max-width: 300px;
+  }
+  .headline-rooms {
+    font-size: 20px;
+  }
+  .adding-wrap__item {
+    max-width: 100%;
+  }
+  .adding-wrap__title {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .column {
+    max-width: 270px;
+  }
+  .headline-rooms {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .column {
+    max-width: 230px;
+  }
+  .headline-rooms {
     font-size: 16px;
   }
 }
@@ -3001,6 +3058,4 @@ template {
     width: 250px;
   }
 }
-
-/* Импорт стилей pony */
 /*# sourceMappingURL=style.css.map */
