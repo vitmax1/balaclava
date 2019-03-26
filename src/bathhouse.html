@@ -181,15 +181,18 @@
 				</div>
 			
 			<div class="bathhouse-form">
-					<form action="#" class="bath-form">
-						<input type="text" name="username" class="bath-input bath-input__name" placeholder="Ваше имя..">
-						<input type="tel" name="phone" class="bath-input bath-input__phone" placeholder="Ваш телефон..">
-						<input type="email" name="email" class="bath-input bath-input__email" placeholder="Ваш email..">
-					</form>
-						<textarea name="textarеa" class="bath-textarea bath-input__textarea" id=""></textarea>
+					<form action="#" id="form-bath">
+						<div class="bath-form">
+							<input type="text" name="username" class="bath-input bath-input__name" placeholder="Ваше имя..">
+							<input type="tel" name="phone" class="phone bath-input bath-input__phone " placeholder="Ваш телефон..">
+							<input type="email" name="email" class="bath-input bath-input__email" placeholder="Ваш email..">
+						</div>
+						<textarea name="massage" class="bath-textarea bath-input__textarea" id=""></textarea>
 						<div class="bathhouse-form__bottombtn">
 							<button class="button button-bath">Арендовать баню!</button>
 						</div>
+					</form>
+
 						<!-- <button class="button button-bath">Арендовать баню!</button> -->
 					<!-- <form action="#" class="bath-textarea">
 						<input type="text" class="bath-input__textarea" placeholder="Ваше сообщение">
@@ -233,11 +236,55 @@
 
 	 <!-- Скрипты -->
  	<script src="js/jquery-3.3.1.min.js"></script>
- 	<script src="js/slick.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>	 
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-	/* Слайдер для бани */
+	/* Форма и слайдер для бани */
 	$(document).ready(function () {
+	$('#form-bath').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+			username: {
+				required: true,
+				minlength: 2,
+				maxlength: 15
+			},
+			phone: "required",
+			email: {
+				required: true,
+				email: true
+			},
+      massage: {
+        required: true,
+        minlength: 2
+        },
+      },
+        messages: {
+          username: {
+            minlength: jQuery.validator.format("Минимальное количество символов: 2"),
+            maxlength: jQuery.validator.format("Максимальное количество символов: 15"),
+            required: "Заполните поле"
+          },
+          phone: {
+            required: "Заполните поле"
+          },
+          email: {
+            email: "Введите корректный email",
+            required: "Заполните поле"
+          },
+          massage: {
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Минимальное количество символов: 2")
+          }
+        }
+      })
+
+      $(".phone").mask("8 (999) 999-9999");		
+
+		// слайдер
 		$('.bathhouse-single').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
