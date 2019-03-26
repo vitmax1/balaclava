@@ -1041,7 +1041,8 @@ template {
 }
 
 .welcome {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .welcome-text {
@@ -1054,7 +1055,7 @@ template {
 }
 
 .welcome-post {
-  max-width: 680px;
+  max-width: 660px;
   font-size: 16px;
   line-height: 24px;
   text-align: justify;
@@ -1075,11 +1076,12 @@ template {
 }
 
 .welcome-image {
-  max-width: 430px;
+  max-width: 450px;
   max-height: 320px;
 }
 
 .welcome-edge {
+  margin-top: 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1096,6 +1098,7 @@ template {
 
 .item-headline {
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .item-description {
@@ -1223,7 +1226,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  top: 55px;
+  top: 80px;
 }
 
 .room-pattern {
@@ -1346,7 +1349,7 @@ template {
   background-position: right;
   background-size: 54% contain;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .sauna:before {
@@ -1414,7 +1417,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  top: 55px;
+  top: 80px;
 }
 
 .sauna-pattern {
@@ -1556,7 +1559,7 @@ template {
   max-width: 760px;
   font-size: 16px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   line-height: 24px;
 }
 
@@ -2137,9 +2140,32 @@ template {
   background-color: #ffffff;
   margin-bottom: 30px;
   border-bottom: 3px solid #eeeeee;
+  position: relative;
 }
 
-.adding-wrap__item:hover #dark-box {
+.adding-wrap__item:before {
+  content: '';
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.adding-wrap__item:nth-child(1):hover::after {
+  content: 'Трансфер от Симферополя до Балаклавы - 2000p.';
+  text-align: center;
+  top: 40%;
+  position: absolute;
+  color: #ffffff;
+  line-height: 28px;
+  font-size: 19px;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+  margin: 0 30px;
+}
+
+.adding-wrap__item:hover::before {
   cursor: pointer;
   display: block;
   -webkit-transition: all 1s linear;
@@ -2168,15 +2194,6 @@ template {
   height: 2px;
   background-color: #cccccc;
   margin-bottom: 20px;
-}
-
-#dark-box {
-  content: '';
-  display: none;
-  width: 360px;
-  height: 326px;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .dark-box__text {
