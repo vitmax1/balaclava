@@ -45,6 +45,28 @@
 		&__title
 			font-size: 28px
 			margin-bottom: 25px
+	&__form
+		position: relative
+	&__form #username-error
+		position: absolute
+		left: 0
+		top: -17px
+		font-size: 12px
+		color: #ff0040
+		+bold
+	&__form #feedbackemail-error
+		position: absolute
+		left: 51%
+		top: -17px
+		font-size: 12px
+		color: #ff0040
+		+bold
+	&__form #message-error
+		position: absolute
+		bottom: 155px
+		font-size: 12px
+		color: #ff0040
+		+bold
 	&-inputs
 		display: flex
 		justify-content: space-between
@@ -53,9 +75,9 @@
 		font-size: 12px
 		padding-left: 40px
 		width: 100%
-		margin-bottom: 5px
+		margin-bottom: 10px
 		height: 53px
-		&:last-child
+		&__email
 			margin-right: 0
 		&__name
 			background: url(../img/form/form-name.png) center left no-repeat
@@ -126,8 +148,16 @@
 		&-networks
 			padding-left: 0
 @media (max-width: 568px)   // 568
-	.feedback-inputs
-		flex-direction: column
+	.feedback
+		&-inputs
+		  flex-direction: column
+		&__input
+			margin-bottom: 20px
+		&__form #feedbackemail-error
+			left: 0
+			top: 57px
+		&__form #message-error
+			top: 130px
 	.map
 		height: 603px
 		&__image img

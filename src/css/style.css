@@ -3279,6 +3279,39 @@ template {
   margin-bottom: 25px;
 }
 
+.feedback__form {
+  position: relative;
+}
+
+.feedback__form #username-error {
+  position: absolute;
+  left: 0;
+  top: -17px;
+  font-size: 12px;
+  color: #ff0040;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.feedback__form #feedbackemail-error {
+  position: absolute;
+  left: 51%;
+  top: -17px;
+  font-size: 12px;
+  color: #ff0040;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.feedback__form #message-error {
+  position: absolute;
+  bottom: 155px;
+  font-size: 12px;
+  color: #ff0040;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
 .feedback-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3293,11 +3326,11 @@ template {
   font-size: 12px;
   padding-left: 40px;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   height: 53px;
 }
 
-.feedback__input:last-child {
+.feedback__input__email {
   margin-right: 0;
 }
 
@@ -3405,6 +3438,16 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .feedback__input {
+    margin-bottom: 20px;
+  }
+  .feedback__form #feedbackemail-error {
+    left: 0;
+    top: 57px;
+  }
+  .feedback__form #message-error {
+    top: 130px;
   }
   .map {
     height: 603px;

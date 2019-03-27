@@ -144,8 +144,6 @@
 <!-- /.feedback -->
 
 
-
-
 	<footer class="footer">
 		<nav class="footer-nav">
 			<div class="container">
@@ -183,6 +181,55 @@
 	<script src="js/jquery.maskedinput.min.js"></script>	 
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<script>
+		$(document).ready(function () {
+
+				document.getElementById('form').onsubmit = function () {
+					if (!grecaptcha.getResponse()) {
+						alert('Вы не заполнили поле Я не робот!');
+						return false; // возвращаем false и предотвращаем отправку формы
+					}
+				};
+				$('#form').validate({
+					errorClass: "invalid",
+					errorElement: "div",
+					rules: {
+						username: {
+							required: true,
+							minlength: 2,
+							maxlength: 15
+						},
+						feedbackemail: {
+							required: true,
+							email: true
+						},
+						message: {
+							required: true,
+							minlength: 2
+						},
+					},
+					messages: {
+						username: {
+							minlength: jQuery.validator.format("Минимальное количество символов: 2"),
+							maxlength: jQuery.validator.format("Максимальное количество символов: 15"),
+							required: "Заполните поле"
+						},
+						userphone: {
+							required: "Заполните поле"
+						},
+						feedbackemail: {
+							email: "Введите корректный email",
+							required: "Заполните поле"
+						},
+						message: {
+							required: "Оставьте сообщение",
+							minlength: jQuery.validator.format("Минимальное количество символов: 2")
+						}
+					}
+				})
+			});
+		</script>
 
 </body>
 </html>
