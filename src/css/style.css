@@ -827,9 +827,12 @@ template {
 }
 
 .menu-list__item a:hover {
-  font-weight: 700;
   color: #3fc380;
   cursor: pointer;
+  outline: 0;
+  outline-offset: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 .hero {
